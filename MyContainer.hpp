@@ -7,6 +7,12 @@
 
 namespace merchav
 {
+    template<typename T> class OrderIterator;
+    template<typename T> class AscendingOrderIterator;
+    template<typename T> class DescendingOrderIterator;
+    template<typename T> class SideCrossOrderIterator;
+    template<typename T> class MiddleOutOrderIterator;
+    
     template<typename T=int> 
     class MyContainer
     {
@@ -24,23 +30,11 @@ namespace merchav
         Node* _tail;
         int _size;
 
-        template<typename> class AscendingOrderIterator;
-        friend class AscendingOrderIterator<T>;
-
-        
-        template<typename> class DescendingOrderIterator;
-        friend class DescendingOrderIterator<T>;
-
-        
-        template<typename> class MiddleOutOrderIterator;
-        friend class MiddleOutOrderIterator<T>;
-        
-        template<typename> class OrderIterator;
-        friend class OrderIterator<T>;
-
-        
-        template<typename> class SideCrossOrderIterator;
-        friend class SideCrossOrderIterator<T>;
+    friend class merchav::OrderIterator<T>;
+    friend class merchav::AscendingOrderIterator<T>;
+    friend class merchav::DescendingOrderIterator<T>;
+    friend class merchav::SideCrossOrderIterator<T>;
+    friend class merchav::MiddleOutOrderIterator<T>;
 
 
 

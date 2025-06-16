@@ -9,10 +9,10 @@ namespace merchav
     {
         
     private:
-        MyContainer<T>::Node* pointer_to_current_node;
+        typename MyContainer<T>::Node* pointer_to_current_node;
 
     public:
-        OrderIterator(Node* ptr = nullptr)
+        OrderIterator(typename MyContainer<T>::Node* ptr = nullptr)
 			: pointer_to_current_node(ptr) {
 		}
         
